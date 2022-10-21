@@ -16,9 +16,9 @@ pipeline {
                 
                 script {
                     
-                    bat 'mvn --version'
+                    sh 'mvn --version'
                     println "Maven building"
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
                     println "build Succesfully"
                 }
             }
@@ -30,7 +30,7 @@ pipeline {
             
             steps {
                 withSonarQubeEnv('sonarqube-server') { 
-                    bat "mvn sonar:sonar"
+                    sh "mvn sonar:sonar"
                 }
             }
         }
