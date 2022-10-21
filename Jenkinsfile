@@ -6,7 +6,7 @@ pipeline {
         stage("clone the git") {
             steps {
                 echo "Cloning the git"
-                git branch: 'master', url: 'https://github.com/KeyonGenesis/jenkins-maven-sonarqube'
+                git branch: 'master', url: 'https://github.com/seanczw/jenkins-maven-sonarqube'
                 echo "Git cloned"
             }
         }
@@ -15,8 +15,10 @@ pipeline {
             steps{
                 
                 script {
-                    withMaven(maven: 'Maven3'){
-                    sh 'mvn clean install'
+                    sh 'mvn --version'
+                    println "Maven building"
+                    sh 'mvn clean package'
+                    println "build Succesfully"
                    }
       
                 }
