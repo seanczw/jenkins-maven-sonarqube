@@ -11,7 +11,7 @@
 	<groupId>in.devops</groupId>
 	<artifactId>jenkins-maven-sonarqube</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>war<packaging/>
+    <packaging>war</packaging>
 	<name>jenkins-maven-sonarqube</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
